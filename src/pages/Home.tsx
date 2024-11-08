@@ -45,7 +45,7 @@ export function Home() {
           <div className="w-full flex flex-row items-center gap-3 sm:gap-4 z-50 py-3 pl-4">
             <div className="border-2 border-zinc-500 rounded-full">
               <div className="min-w-20 min-h-20 max-w-20 max-h-20 rounded-full overflow-hidden border-[3px] border-transparent">
-                <img src="https://media.licdn.com/dms/image/v2/D4E03AQFyk19GAuWeUA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1724079964113?e=1730937600&v=beta&t=e4qYAAeU3VhXqwxY_4AtG2BULExs9qImeh0yWOnKuWs" alt="Vitor" />
+                <img src="https://avatars.githubusercontent.com/u/81326138?v=4" alt="Vitor" />
               </div>  
             </div>
             <div className="flex flex-col mt-2">
