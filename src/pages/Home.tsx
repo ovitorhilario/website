@@ -24,9 +24,9 @@ export function Home() {
   // Customização do portfólio
   const porfolioOwner = {
     name: "Vitor Hilário",
-    actualRole: "Desenvolvedor Mobile",
-    actualCompany: "@Epistemic",
-    description: "Desenvolvedor Mobile com foco em desenvolvimento híbrido com React Native e Android nativo.",
+    actualRole: "Desenvolvedor Mobile & Front-End",
+    actualCompany: "@Pull Up",
+    description: "Desenvolvedor Mobile e Front-End com foco em React Native para dispositivos móveis e React.js para web.",
     linkedin: "https://www.linkedin.com/in/vitor-hilario/",
     github: "https://github.com/ovitorhilario",
     whatsapp: "https://wa.me/5518998017842",
