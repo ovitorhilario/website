@@ -10,7 +10,6 @@ export interface ButtonProps {
 export function Button({
   title,
   icon,
-  color,
   url
 }: ButtonProps) {
 
