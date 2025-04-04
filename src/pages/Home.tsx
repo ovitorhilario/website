@@ -18,15 +18,17 @@ import { Stack } from "../components/stack";
 import { projects } from "../content/projects";
 import { experiences } from "../content/experiencies";
 import { formations } from "../content/formations";
+import IconApple from "../components/icons/apple";
+import IconDrizzle from "../components/icons/drizzle";
 
 export function Home() {
 
   // Customização do portfólio
   const porfolioOwner = {
     name: "Vitor Hilário",
-    actualRole: "Desenvolvedor Mobile & Front-End",
-    actualCompany: "@Pull Up",
-    description: "Desenvolvedor Mobile e Front-End com foco em React Native para dispositivos móveis e React.js para web.",
+    actualRole: "Desenvolvedor de Software",
+    actualCompany: "@Pull Up Eletronic Systems",
+    description: "Programador com foco em Aplicativos para Android e iOS, com experiência em React Native e Expo. Além disso, atuo como desenvolvedor Front-End usando React.js.",
     linkedin: "https://www.linkedin.com/in/vitor-hilario/",
     github: "https://github.com/ovitorhilario",
     whatsapp: "https://wa.me/5518998017842",
@@ -56,9 +58,9 @@ export function Home() {
                 <span>
                   {porfolioOwner.actualRole}
                 </span>
-                <span className="text-zinc-400">
+                <a className="text-zinc-400" href="https://www.pullup.com.br/" target="_blank" translate="no">
                   {` ${porfolioOwner.actualCompany}`}
-                </span>
+                </a>
               </p>
             </div>
           </div>
@@ -108,6 +110,11 @@ export function Home() {
           />
           <div className="flex flex-row flex-wrap gap-3 pb-4 pt-2 px-4 xl:px-0">
             <Button 
+              title="Expo"
+              color="default"
+              icon={<IconExpo className="w-4 h-4" />}
+            />
+            <Button 
               title="React Native"
               color="cyan"
               icon={<IconReact className="w-5 h-5 text-cyan-400" />}
@@ -117,15 +124,10 @@ export function Home() {
               color="green"
               icon={<IconAndroid className="w-4 h-4 text-green-500" />}
             />
-            <Button 
-              title="Expo"
-              color="default"
-              icon={<IconExpo className="w-4 h-4" />}
-            />
-            <Button 
-              title="Firebase"
-              color="yellow"
-              icon={<IconFirebase className="w-4 h-4 text-yellow-400" />}
+            <Button
+              title="iOS"
+              color="indigo"
+              icon={<IconApple className="w-4 h-4 text-[#007AFF]" />}
             />
             <Button 
               title="TypeScript"
@@ -142,6 +144,16 @@ export function Home() {
               color="purple"
               icon={<IconKotlin className="w-4 h-4 text-purple-400" />}
             />
+            <Button 
+              title="Firebase"
+              color="yellow"
+              icon={<IconFirebase className="w-4 h-4 text-yellow-400" />}
+            />
+            <Button 
+              title="Drizzle"
+              color="green-neon"
+              icon={<IconDrizzle className="w-4 h-4 text-[#C5F74F]" />}
+            />
           </div>
 
           <Stack 
@@ -149,13 +161,15 @@ export function Home() {
             icon={<FolderCode className="w-6 h-6 text-zinc-300" />}
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 pb-4 pt-2 xl:px-0">
-            {projects.map(({ title, description, link }, index) => {
+            {projects.map(({ title, description, link, tags, img }, index) => {
               return (
                 <Project 
                   key={index}
                   title={title}
                   description={description}
+                  tags={tags}
                   link={link}
+                  img={img}
                 />
               );
             })}
@@ -203,7 +217,7 @@ export function Home() {
         {/* Footer */}
         <footer className="flex flex-col items-center mb-6 mt-8">
           <span className="text-sm font-semibold text-zinc-500" translate="no">
-            © {porfolioOwner.name}, 2024
+            © {porfolioOwner.name}, {new Date().getFullYear()}
           </span>
         </footer>
       </div>
