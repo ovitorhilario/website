@@ -28,7 +28,7 @@ export function Home() {
     name: "Vitor Hilário",
     actualRole: "Desenvolvedor de Software",
     actualCompany: "@Pull Up Eletronic Systems",
-    description: "Programador com foco em Aplicativos para Android e iOS, com experiência em React Native e Expo. Além disso, atuo como desenvolvedor Front-End usando React.js.",
+    description: "Programador de aplicativos para Android e iOS, com foco em React Native e Expo. Além disso, atuo como desenvolvedor Front-End usando React.js.",
     linkedin: "https://www.linkedin.com/in/vitor-hilario/",
     github: "https://github.com/ovitorhilario",
     whatsapp: "https://wa.me/5518998017842",
@@ -39,26 +39,28 @@ export function Home() {
       <div className="max-w-2xl w-full flex flex-col items-stretch">
         
         {/* Gradient Blur */}
-        <div className="w-full min-h-16 bg-gradient-to-bl from-slate-900 via-blue-900 to-black opacity-80 blur-3xl">
+        <div className="w-full min-h-16 bg-gradient-to-bl from-slate-900 via-orange-600/35 to-black opacity-80 blur-3xl">
         </div>
+        {/* <div className="w-full min-h-16 bg-gradient-to-bl from-slate-900 via-blue-900 to-black opacity-80 blur-3xl">
+        </div> */}
 
         <header className="flex flex-col min-h-32 gap-4 pb-6 -mt-12">
           {/* Avatar */}
           <div className="w-full flex flex-row items-center gap-3 sm:gap-4 z-50 py-3 pl-4">
-            <div className="border-2 border-zinc-500 rounded-full">
+            <div className="border-2 border-zinc-600 rounded-full">
               <div className="min-w-20 min-h-20 max-w-20 max-h-20 rounded-full overflow-hidden border-[3px] border-transparent">
                 <img src="https://avatars.githubusercontent.com/u/81326138?v=4" alt="Vitor" />
               </div>  
             </div>
             <div className="flex flex-col mt-2">
-              <h1 className="text-lg sm:text-xl font-bold text-zinc-50" translate="no">
+              <h1 className="text-lg sm:text-xl font-bold text-zinc-200" translate="no">
                 {porfolioOwner.name}
               </h1>
-              <p className="text-sm sm:text-base font-medium text-zinc-300">
+              <p className="text-sm sm:text-base font-medium text-zinc-400">
                 <span>
                   {porfolioOwner.actualRole}
                 </span>
-                <a className="text-zinc-400" href="https://www.pullup.com.br/" target="_blank" translate="no">
+                <a className="text-zinc-300/90" href="https://www.pullup.com.br/" target="_blank" translate="no">
                   {` ${porfolioOwner.actualCompany}`}
                 </a>
               </p>
@@ -86,12 +88,14 @@ export function Home() {
               color="default"
               url={porfolioOwner.linkedin}
               icon={<IconLinkedin className="w-4 h-4" />}
+              expandable
             />
             <Button 
               title="GitHub"
               color="default"
               url={porfolioOwner.github}
               icon={<IconGithub className="w-4 h-4" />}
+              expandable
             />
             <Button 
               title="Entrar em contato"

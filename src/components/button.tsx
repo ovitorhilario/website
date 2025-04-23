@@ -5,12 +5,14 @@ export interface ButtonProps {
   icon: JSX.Element;
   color: Color;
   url?: string;
+  expandable?: boolean;
 }
 
 export function Button({
   title,
   icon,
-  url
+  url,
+  expandable
 }: ButtonProps) {
 
   const colors: Record<Color, string> = {
@@ -29,11 +31,18 @@ export function Button({
     <a
       href={url}
       target={url ? "_blank" : undefined}
-      className={`flex flex-row items-center text-nowrap transition-all gap-2 px-4 py-1.5 sm:py-2 rounded-full
+      className={`group/button w-fit flex flex-row items-center text-nowrap transition-all gap-2 px-4 py-1.5 sm:py-2 rounded-full
         font-semibold text-sm text-zinc-300 hover:text-zinc-400 ${colors['default']}`}
     >
       {icon}
-      {title}
+      {expandable ? (
+        <div
+          className="max-w-0 overflow-hidden group-hover/button:max-w-[200px] duration-500 ease-in-out transition-all whitespace-nowrap"
+          style={{ transitionProperty: 'max-width, opacity' }}
+        >
+          {title}
+        </div>
+      ) : title}
     </a>
   );
 }
