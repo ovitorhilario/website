@@ -27,7 +27,7 @@ export function Home() {
   const porfolioOwner = {
     name: "Vitor Hilário",
     actualRole: "Desenvolvedor de Software",
-    actualCompany: "@Pull Up Eletronic Systems",
+    actualCompany: "",
     description: "Programador de aplicativos para Android e iOS, com foco em React Native e Expo. Além disso, atuo como desenvolvedor Front-End usando React.js.",
     linkedin: "https://www.linkedin.com/in/vitor-hilario/",
     github: "https://github.com/ovitorhilario",

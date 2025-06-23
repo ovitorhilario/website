@@ -8,7 +8,7 @@ export const experiences: ExperiencieProps[] = [
     companyImg: pullup,
     companyUrl: "https://www.pullup.com.br/",
     role: "Desenvolvedor Mobile & Front-End",
-    period: `out 2023 - Atualmente`,
+    period: `out 2023 - jun 2025, 1 ano e 9 meses`,
     description: "Desenvolvimento de aplicativos móveis com React Native e Expo, integrando recursos como notificações, Firebase, Apple Health Kit e gestão de estados. Criação de websites com React.js, incluindo autenticação, dashboards interativos e consumo de APIs. Implementação de funcionalidades como gráficos dinâmicos, fluxos de estado e responsividade."
   },
   {
